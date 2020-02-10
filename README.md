@@ -39,23 +39,43 @@ Contains 24,364 records, one for each tag attached to each of the 5,000 mods fro
 
 ## About the Data
 
-- skyrim
-- mods
-- endorsements and downloads
+Skyrim is a roleplaying video game featuring a fantasy setting and a huge world filled with locations to explore. Mods are special modifications that can be added to the game. Skyrim has a large "modding community" that creates and shares mods that do everything from overhauling the (somewhat abysmal) user interface (SkyUI) to turning all of the dragons into Thomas the Tank Engine characters (Really Useful Dragons). Players may have upwards of one or two hundred mods added to their game at any time.
 
-## Collection
+All mods in this dataset were collected from Nexus, the primary site for hosting mods. They represent the top 5,000 (by number of endorsements) as of the time of collection. It is worth noting that not all of these are actually mods. For example, GEMS is a fancy list for Gameplay Enhancement Mods, and Forever Free is a logo that modders can use on their own mod pages.
 
-- collected from Nexus
-- web scraping with Selenium (python)
-- cleaned for easier usage
+There is a new edition of Skyrim - Skyrim Special Edition (SSE). Mods for this version are listed separately, and therefore are not included in this dataset. The data does, however, include a few mods for Enderal, a complete overhaul/new game using Skyrim as its base.
+
+The data was scraped using Python (and Selenium). It was then cleaned to make it more useable in workshops and tutorials. For a list of changes made from the original scarped data, see below.
+
+### Cleaning
+
+#### Changes made to preserve original data
+
+- fixed capitalization issues caused by web scraping
+- removed leading and trailing whitespace
+- merged a couple of tags with commas that got seperated
+
+#### Changes made to the original data
+
+- a few minor capitalization changes for consistency
+- changed "- Other Languages" (tag) to "Other Languages"
+- removed spaces between slashes for two tags (to match the other tags)
+  - "Guilds / Factions" to "Guilds/Factions"
+  - "Plants / Foliage" to "Plants/Foliage"
+- edited country names
+  - "Korea, Democratic People's Republic of" to "North Korea"
+  - "Korea, Republic of" to "South Korea"
+  - "Taiwan, Province of China" to "Taiwan"
+- changed one instance (one mod, three tags) of user country from "none" to "Not Specified"
+
+### Potential Issues
+
+- Users can put whatever country they like.
+- Data changes over time.
+- There could be uncaught issues with the web scraping.
 
 ## Usage
 
-## Issues
+Please feel free to use this dataset in your own workshops and tutorials.
 
-- users can put whatever country they like
-- data changes over time
-- could be uncaught issues with the web scraping
-
-
-
+Credit for gathering the data: Theo Acker, University of Oklahoma Libraries
