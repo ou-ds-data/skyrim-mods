@@ -76,6 +76,8 @@ The data was scraped using Python (and Selenium). It was then cleaned to make it
 
 ## Usage
 
+This data is currently used in the tutorial [Visualizing Data with Tableau](https://www.ds-tutorials.oucreate.com/tableau-skyrim/).
+
 Please feel free to use this dataset in your own workshops and tutorials.
 
 Credit for gathering the data: Theo Acker, University of Oklahoma Libraries
